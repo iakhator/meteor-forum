@@ -5,13 +5,14 @@ import App from '/imports/ui/App';
 
 import { Provider } from 'react-redux'
 import store from '../imports/store'
+import {RenderRoutes} from '../imports/startup/client/routes.js'
 
 const rootElement = document.getElementById('react-target');
 
 Meteor.startup(() => {
   render(
     <Provider store={store}>
-      <App/>
+      <RenderRoutes/>
     </Provider>
   , rootElement);
 });
